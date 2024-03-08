@@ -1,0 +1,81 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+
+{% block css %}
+<style>
+    /* 
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    } */
+    #container-fluid{
+        background-color: rgb(158, 227, 226)
+    }
+    #inner-container {
+        max-width: 600px;
+        margin-left: 15rem ; 
+        padding: 20px;
+        background-color: rgb(190, 237, 237);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+{% endblock css %}
+
+
+{% block content %}
+<div id="container-fluid">
+    <div id="inner-container">
+        <h1>Book a Room</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="check-in-date">Check-in Date:</label>
+            <input type="date" id="check-in-date" name="check-in-date" required>
+            <label for="check-out-date">Check-out Date:</label>
+            <input type="date" id="check-out-date" name="check-out-date" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}

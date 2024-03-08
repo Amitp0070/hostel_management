@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css %}
+<style>
+ body{
+  background-color: rgb(158, 227, 226);
+ }
+</style>
+{% endblock css %}
+
+{% block content %}
+
+  <h1>Search Results</h1>
+  
+  {% if rooms %}
+    <ul>
+      {% for room in rooms %}
+        <li>{{ room.name }} - Capacity: {{ room.capacity }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No rooms found.</p>
+  {% endif %}
+
+
+{% endblock content %}

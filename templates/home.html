@@ -1,0 +1,172 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css %}
+<style>
+    body {
+        background-color: rgb(158, 227, 226);
+    }
+
+    section {
+        background-image: url('/static/images/image2.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+       
+    }
+    .card {
+        height: 380px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 1.5rem; 
+        box-shadow: 3px 3px 5px;
+        background-color: rgba(134, 193, 225, 0.682);
+        /* margin-top: 1rem; */
+        /* align-items: start; */
+    }
+
+    .card img {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 1.5rem; 
+        /* /* width: 100%; */
+        height: 200px;
+    }
+
+    .txt {
+        padding-bottom: 3rem;
+       
+        
+    }
+
+    h1 {
+        color: rgb(2, 81, 57);
+        /* padding-bottom: 3rem; */
+        /* font-size: 3rem; */
+    }
+
+    .txt p {
+        color: rgba(247, 247, 248, 0.997);
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* .card-body a{ */
+    /* display: flex; */
+    /* align-content: end;
+    } */
+</style>
+
+{% endblock css %}
+
+{% block content %}
+<!-- {% include 'components/message.html' %} -->
+<section class="py-3 text-center">
+    <div class="fw-bold fs-3 text-warning">
+        <marquee><u>"Welcome to Our Hostel: Where Comfort Meets Adventure!"</u></marquee>
+    </div>
+    <div class="row py-lg-1">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <div class="txt">
+                <h1 class="fw-bold"><u>Affordable Comfort </u>: <br>"Stay with Us at Our Hostel!"</h1>
+                <p class="lead">"Stay at our hostel for a cozy and budget-friendly experience. Located in a convenient
+                    spot,
+                    our place offers clean rooms and basic amenities. Enjoy free Wi-Fi, access to a shared kitchen, and
+                    helpful staff available around the clock. Book easily and explore nearby attractions hassle-free.
+                    Your
+                    comfortable stay awaits!"</p>
+                <p>
+            </div>
+            <a href="{% url 'login' %}" class="btn btn-outline-light fw-bold btn-lg my-1">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-warning fw-bold btn-lg my-1">Register</a>
+            </p>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-3 col-md-6 py-2">
+            <!-- <div class="col-md-3"> -->
+            <div class="card" style="border-radius: 2rem;">
+                <img src="{% static 'images/image1.jpg' %}" class="card-img-top mx-auto d-block " alt="">
+                <div class="card-body" style="text-align: start;">
+                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Book rooms for living"</b></h5>
+                    <p class="card-text">Select the room as your requirement</p>
+                    <a href="{% url 'book_room' %}" class="btn btn-outline-secondary text-dark">Book rooms</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 py-2">
+            <div class="card" style="border-radius: 2rem;">
+                <img src="{% static 'images/image.jpeg' %}" class="card-img-top mx-auto d-block img-fluid"
+                    alt="Centered Image">
+                <div class="card-body" style="text-align: start;">
+                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Simplify Your Room"</b></h5>
+                    <p class="card-text">Select the room as your requirement</p>
+                    <a href="{% url 'room_management' %}" class="btn btn-outline-secondary text-dark">Manage rooms</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 py-2">
+            <div class="card" style="border-radius: 2rem;">
+                <img src="{% static 'images/image0.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
+                    alt="Centered Image">
+                <div class="card-body" style="text-align: start;">
+                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Enroll with Ease"</b></h5>
+                    <p class="card-text">Enroll with eaasest way</p>
+                    <a href="{% url 'add_student' %}" class="btn btn-outline-secondary text-dark">Enroll Student</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 py-2">
+            <div class="card" style="border-radius: 2rem;">
+                <img src="{% static 'images/image3.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
+                    alt="Centered Image">
+                <div class="card-body" style="text-align: start;">
+                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Explore Available Rooms"</b></h5>
+                    <p class="card-text">Select the room as your requirement</p>
+                    <a href="{% url 'room_list' %}" class="btn btn-outline-secondary text-dark">Rooms list</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 py-2">
+            <div class="card" style="border-radius: 2rem;">
+                <img src="{% static 'images/image_staff.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
+                    alt="Centered Image">
+                <div class="card-body" style="text-align: start;">
+                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Check Our Staff List!"</b></h5>
+                    <p class="card-text">Select the room as your requirement</p>
+                    <a href="{% url 'staff_list' %}" class="btn btn-outline-secondary text-dark">Check Staffs</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 py-2">
+            <div class="card" style="border-radius: 2rem;">
+                <img src="{% static 'images/image_student.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
+                    alt="Centered Image">
+                <div class="card-body" style="text-align: start;">
+                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Check Student list"</b></h5>
+                    <p class="card-text">Select the room as your requirement</p>
+                    <a href="{% url 'student_list' %}" class="btn btn-outline-secondary text-dark">Check students</a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-lg-3 col-md-6 py-2">
+            <div class="card" style="border-radius: 2rem;">
+                <img src="{% static 'images/image.jpeg' %}" class="card-img-top mx-auto d-block img-fluid"
+                    alt="Centered Image">
+                <div class="card-body" style="text-align: start;">
+                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Search rooms for comfortable"</b></h5>
+                    <!-- <p class="card-text">Select the room as your requirement</p> -->
+                    <a href="{% url 'search_room' %}" class="btn btn-outline-secondary text-dark">Search rooms</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

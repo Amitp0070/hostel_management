@@ -1,0 +1,140 @@
+{% load static %}
+{% block css %}
+<style>
+    #navbar {
+        background-color: rgba(104, 192, 160, 0.902);
+    }
+
+    /* .menu{
+    display: flex;
+    justify-content: first baseline;
+  } */
+
+  .nav-link{
+    font-size: 1.2rem;
+    margin-left: 3rem;
+    font-family: sans-serif;
+    font-weight: bold; 
+    
+  }
+
+    .nav-link:hover .dropdown-menu {
+        scale: 0.95;
+        border-radius: 2rem;
+        transition: all 0.5s;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(34, 34, 34, 0.411);
+        transition: all 0.5s;
+        border-radius: 2rem;
+    }
+    .dropdown-menu{
+        background-color: rgba(90, 164, 137, 0.931);
+    }
+    .dropdown-item:hover {
+        background-color: rgba(34, 34, 34, 0.411);
+        border-radius: 1rem;
+        transition: all 0.5s;
+    }
+    /* .logo img{
+        size: 2rem;
+    } */
+
+    /* .dropdown-menu {
+        border-radius: 3rem;
+        background-color: rgb(55, 91, 78);
+        transition: all 0.5s;
+        line-height: 3.5ch;
+
+    } */
+
+    /* .dropdown-menu a:hover {
+        border-radius: 2rem;
+        background-color: rgba(11, 11, 11, 0.411);
+    } */
+</style>
+{% endblock css %}
+
+
+<header class="p-3" id="navbar">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <img class="logo" src="{% static '/images/logo2.png' %}" style="width: 50px; height: 50px;" alt="">
+            <a class="navbar-brand" href="#">
+              <b>Family.Hub</b>
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="{% url 'home' %}" class="nav-link active px-3 text-dark">Home</a></li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" id="dropdownId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Rooms</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item text-white" href="#">BookRoom 
+                        </a>
+
+                        <a class="dropdown-item text-white" href="#">Exit
+                        </a>
+                    </div>
+                </li> -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" id="dropdownId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Services</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item text-white" href="#">Room Service 
+                        </a>
+
+                        <a class="dropdown-item text-white" href="#">Exit
+                        </a>
+                    </div>
+                </li> -->
+                <!-- <li><a href="#" class="nav-link px-2 text-white">Billing</a></li> -->
+                <!-- <li><a href="#" class="nav-link px-2 text-white">Reservation</a></li> -->
+                <!-- <li><a href="#" class="nav-link px-2 text-white">Services</a></li> -->
+                <li><a href="{% url 'contact' %}" class="nav-link px-3 text-dark">Contact</a></li>
+                <li><a href="{% url 'about' %}" class="nav-link px-3 text-dark">About Us</a></li>
+                <!-- <li><a href="{% url 'room_list' %}" class="nav-link px-1 text-white">Room_list</a></li> -->
+
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-2">
+                <input type="text" class="form-control" placeholder="Search.." name="q">
+                <!-- <button class="btn btn-outline-success  my-sm-0" type="submit">
+                        Search
+                      </button> -->
+            </form>
+            <div class="text-end">
+                {% if user.is_authenticated %}
+
+
+
+
+                <div class="dropdown open">
+                    <a class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        {{user.username|title}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="triggerId">
+
+                        {% if user.is_superuser %}
+                        <a class="dropdown-item" href="{% url 'admin:index' %}">Dashboard</a>
+
+                        {% endif %}
+
+
+                        <a class="dropdown-item text-dark" href="#">Profile</a>
+                        <a class="dropdown-item text-dark" href="{% url 'logout' %}">Logout</a>
+
+                    </div>
+                </div>
+
+                {% else %}
+                <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Login</a>
+                <a href="{% url 'register' %}" class="btn btn-warning">Register</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</header>
+
+

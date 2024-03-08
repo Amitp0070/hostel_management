@@ -1,0 +1,58 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block css %}
+<style>
+        body {
+            background-color: rgb(158, 227, 226);
+            font-family: Arial, sans-serif;
+            /* margin: 20px; */
+        }
+        #container{
+            background-color: rgb(190, 237, 237);
+            width: 600px;
+            height: fit-content;
+            margin-top: 1rem;
+            margin-left: 3rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            
+            
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style> 
+{% endblock css %}
+
+{% block content %}
+<div id="container">
+    <h2 class="mx-1">Room List</h2>
+    <table>
+        <tr>
+            <th>Room Number</th>
+            <th>Capacity</th>
+           
+        </tr>
+        {% for room in rooms %}
+        <tr>
+            <td>{{ room.room_number }}</td>
+            <td>{{ room.capacity }}</td>
+          
+        </tr>
+        {% endfor %}
+        <!-- Add more rows for additional rooms -->
+    </table>
+</div>
+{% endblock content %}
