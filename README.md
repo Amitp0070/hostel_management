@@ -19,3 +19,5 @@ About page
 ![Screenshot 2024-03-10 182705](https://github.com/Amitp0070/hostel_management/assets/147509394/5f79692c-e85c-4ece-afdf-c849648d8481)
 ![Screenshot 2024-03-10 182954](https://github.com/Amitp0070/hostel_management/assets/147509394/421d6e83-8b68-4b99-a540-c55bae4040e4)
 
+Footer
+![Screenshot 2024-03-10 182059](https://github.com/Amitp0070/hostel_management/assets/147509394/e79a6f9d-cc04-4604-91df-6fb0ee811648)
