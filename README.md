@@ -11,3 +11,5 @@ Register page
 Login page
 ![Screenshot 2024-03-12 192234](https://github.com/Amitp0070/hostel_management/assets/147509394/85f9408b-2ab7-4cc5-8ace-a01bef03dc33)
 
+Contact page
+![Screenshot 2024-03-10 182337](https://github.com/Amitp0070/hostel_management/assets/147509394/30fdde6a-7011-4205-8581-537a041ac4c0)
