@@ -15,6 +15,9 @@ This is the Home page of my mini project
 Form for add student for hostel room
 ![Screenshot 2024-03-10 183121](https://github.com/Amitp0070/hostel_management/assets/147509394/fbe3638d-2494-44dd-98e1-68bde3c872b4)
 
+Form for book rooms
+![Screenshot 2024-03-10 183027](https://github.com/Amitp0070/hostel_management/assets/147509394/d098673a-80d5-41ea-b403-6fc18fe9d57d)
+
 Check for room list
 ![Screenshot 2024-03-10 183301](https://github.com/Amitp0070/hostel_management/assets/147509394/e79adefb-3486-40cb-b333-f472df5cca70)
 
