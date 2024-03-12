@@ -12,6 +12,10 @@ This is the Home page of my mini project
 ![Screenshot 2024-03-10 183511](https://github.com/Amitp0070/hostel_management/assets/147509394/a952aed3-5006-49e7-829b-4e4c4550c01f)
 ![Screenshot 2024-03-10 182027](https://github.com/Amitp0070/hostel_management/assets/147509394/0461e44d-a7d1-4dc3-90ae-89319fd6a192)
 
+Form for adding student for hostel room
+![Screenshot 2024-03-10 183121](https://github.com/Amitp0070/hostel_management/assets/147509394/fbe3638d-2494-44dd-98e1-68bde3c872b4)
+
+
 Contact page
 ![Screenshot 2024-03-10 182337](https://github.com/Amitp0070/hostel_management/assets/147509394/30fdde6a-7011-4205-8581-537a041ac4c0)
 
