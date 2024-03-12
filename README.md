@@ -13,3 +13,8 @@ Login page
 
 Contact page
 ![Screenshot 2024-03-10 182337](https://github.com/Amitp0070/hostel_management/assets/147509394/30fdde6a-7011-4205-8581-537a041ac4c0)
+
+About page
+![Screenshot 2024-03-10 182705](https://github.com/Amitp0070/hostel_management/assets/147509394/5f79692c-e85c-4ece-afdf-c849648d8481)
+![Screenshot 2024-03-10 182954](https://github.com/Amitp0070/hostel_management/assets/147509394/421d6e83-8b68-4b99-a540-c55bae4040e4)
+
