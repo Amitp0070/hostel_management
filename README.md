@@ -8,3 +8,6 @@ This is the Home page of my mini project
 Register page
 ![Screenshot 2024-03-12 192526](https://github.com/Amitp0070/hostel_management/assets/147509394/41cade3c-b999-4326-b11e-4b28f4dfad7d)
 
+Login page
+![Screenshot 2024-03-12 192234](https://github.com/Amitp0070/hostel_management/assets/147509394/85f9408b-2ab7-4cc5-8ace-a01bef03dc33)
+
