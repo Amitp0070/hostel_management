@@ -4,3 +4,7 @@ This software helps manage hostels efficiently. It tracks student details, room 
 
 This is the Home page of my mini project 
 ![Screenshot 2024-03-10 183511](https://github.com/Amitp0070/hostel_management/assets/147509394/a952aed3-5006-49e7-829b-4e4c4550c01f)
+
+Register page
+![Screenshot 2024-03-12 192526](https://github.com/Amitp0070/hostel_management/assets/147509394/41cade3c-b999-4326-b11e-4b28f4dfad7d)
+
