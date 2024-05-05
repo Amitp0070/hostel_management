@@ -18,6 +18,7 @@
         justify-content: space-between;
         padding-left: 2rem;
         padding-right: 2rem;
+        padding-bottom: 2rem;
     }
 
     .card {
@@ -28,6 +29,7 @@
         flex: 1;
         padding: 20px;
     }
+    
 
     .column h2 {
         padding-top: 2rem;
@@ -38,6 +40,14 @@
     .column p {
         padding-top: 1rem;
         line-height: 1.6;
+    }
+    .row .card:hover{
+        transform: scale(0.9);
+        transition: 1s ease;
+    }
+    .row .card img:hover{
+        transform: scale(0.9);
+        transition: 1s ease;
     }
 </style>
 {% endblock css %}

@@ -3,7 +3,6 @@
 
 {% block css %}
 <style>
-    
     body {
         background-color: rgb(158, 227, 226);
     }
@@ -13,33 +12,53 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-       
+
     }
+
+    .light {
+        
+        backdrop-filter: blur(3px);
+    }
+
     .card {
         height: 380px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        border-radius: 1.5rem; 
+        border-radius: 1.5rem;
         box-shadow: 3px 3px 5px;
         background-color: rgba(134, 193, 225, 0.682);
         /* margin-top: 1rem; */
         /* align-items: start; */
+
+    }
+
+    .card:hover {
+        transform: scale(0.9);
+        transition: 1s ease;
     }
 
     .card img {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        border-radius: 1.5rem; 
+        border-radius: 1.5rem;
         /* /* width: 100%; */
         height: 200px;
+        transition: 1s ease;
+    }
+
+    .card img:hover {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.9);
+        transition: 1s ease;
     }
 
     .txt {
         padding-bottom: 3rem;
-       
-        
+
+
     }
 
     h1 {
@@ -65,24 +84,29 @@
 {% block content %}
 <!-- {% include 'components/message.html' %} -->
 <section class="py-3 text-center">
-    <div class="fw-bold fs-3 text-warning">
-        <marquee><u>"Welcome to Our Hostel: Where Comfort Meets Adventure!"</u></marquee>
-    </div>
-    <div class="row py-lg-1">
-        <div class="col-lg-6 col-md-8 mx-auto">
-            <div class="txt">
-                <h1 class="fw-bold"><u>Affordable Comfort </u>: <br>"Stay with Us at Our Hostel!"</h1>
-                <p class="lead">"Stay at our hostel for a cozy and budget-friendly experience. Located in a convenient
-                    spot,
-                    our place offers clean rooms and basic amenities. Enjoy free Wi-Fi, access to a shared kitchen, and
-                    helpful staff available around the clock. Book easily and explore nearby attractions hassle-free.
-                    Your
-                    comfortable stay awaits!"</p>
-                <p>
+    <div class="light">
+        <div class="fw-bold fs-3 text-warning">
+            <marquee><u>"Welcome to Our Hostel: Where Comfort Meets Adventure!"</u></marquee>
+        </div>
+        <div class="row py-lg-1">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <div class="txt">
+                    <h1 class="fw-bold"><u>Affordable Comfort </u>: <br>"Stay with Us at Our Hostel!"</h1>
+                    <p class="lead">"Stay at our hostel for a cozy and budget-friendly experience. Located in a
+                        convenient
+                        spot,
+                        our place offers clean rooms and basic amenities. Enjoy free Wi-Fi, access to a shared kitchen,
+                        and
+                        helpful staff available around the clock. Book easily and explore nearby attractions
+                        hassle-free.
+                        Your
+                        comfortable stay awaits!"</p>
+                    <p>
+                </div>
+                <a href="{% url 'login' %}" class="btn btn-outline-light fw-bold btn-lg my-1">Login</a>
+                <a href="{% url 'register' %}" class="btn btn-warning fw-bold btn-lg my-1">Register</a>
+                </p>
             </div>
-            <a href="{% url 'login' %}" class="btn btn-outline-light fw-bold btn-lg my-1">Login</a>
-            <a href="{% url 'register' %}" class="btn btn-warning fw-bold btn-lg my-1">Register</a>
-            </p>
         </div>
     </div>
 </section>
@@ -160,13 +184,13 @@
             <div class="card" style="border-radius: 2rem;">
                 <img src="{% static 'images/image.jpeg' %}" class="card-img-top mx-auto d-block img-fluid"
                     alt="Centered Image"> -->
-                <!-- <div class="card-body" style="text-align: start;">
+        <!-- <div class="card-body" style="text-align: start;">
                     <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Search rooms for comfortable"</b></h5> -->
-                    <!-- <p class="card-text">Select the room as your requirement</p> -->
-                    <!-- <a href="{% url 'search_room' %}" class="btn btn-outline-secondary text-dark">Search rooms</a>
+        <!-- <p class="card-text">Select the room as your requirement</p> -->
+        <!-- <a href="{% url 'search_room' %}" class="btn btn-outline-secondary text-dark">Search rooms</a>
                 </div> -->
 
-            <!-- </div>
+        <!-- </div>
         </div> -->
     </div>
 </div>
