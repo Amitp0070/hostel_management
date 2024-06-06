@@ -183,16 +183,6 @@ def search_room(request):
         rooms = Room.objects.none()
     return render(request, 'search_room.html', {'rooms': rooms})
 
-# def search_rooms(request):
-#     if request.method == 'GET':
-#         search_query = request.GET.get('search_query')
-#         if search_query:
-#             rooms = Room.objects.filter(name__icontains=search_query)
-#             return render(request, 'search_results.html', {'rooms': rooms})
-    
-#     # If search query is empty or not provided
-#     return render(request, 'search_results.html', {'rooms': None})
-
 
 @login_required
 def book_room(request):

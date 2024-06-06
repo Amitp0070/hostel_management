@@ -57,7 +57,6 @@ class Staff(models.Model):
 class Student(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    age = models.IntegerField()
     roll_number = models.CharField(max_length=20, unique=True)
     email = models.EmailField()
     # Add other fields as needed
