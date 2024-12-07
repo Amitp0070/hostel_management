@@ -2,7 +2,7 @@
 {% block css %}
 <style>
     #navbar {
-        background-color: rgba(104, 192, 160, 0.902);
+        background-color: rgba(105, 156, 173, 0.889);
     }
 
     .nav-link {
@@ -34,12 +34,36 @@
         border-radius: 1rem;
         transition: all 0.5s;
     }
+    .text-end .btn {
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        /* background: none; */
+        font-size: 14px;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        text-transform: capitalize;
+    }
+
+    .text-end .btn:hover {
+        background: #ffffff;
+        color: #2c2c2c;
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+    }
+    .text-end .btn-warning:hover {
+        background: #000000;
+        color: #ffffff;
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(74, 74, 74, 0.5);
+        /* transform: scale(1.05); */ 
+    }
 
 </style>
 {% endblock css %}
 
 
-<header class="p-3" id="navbar">
+<header class="p-1" id="navbar">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <img class="logo" src="{% static '/images/logo2.png' %}" style="width: 50px; height: 50px;" alt="">
@@ -73,7 +97,7 @@
                 </div>
 
                 {% else %}
-                <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Login</a>
+                <a href="{% url 'login' %}" class="btn  me-2">Login</a>
                 <a href="{% url 'register' %}" class="btn btn-warning">Register</a>
                 {% endif %}
             </div>

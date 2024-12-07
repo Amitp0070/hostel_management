@@ -9,7 +9,7 @@
     }
 
     body {
-        background-color: rgb(158, 227, 226);
+        background-color: rgba(105, 156, 173, 0.889);
     }
 
     section {
@@ -19,75 +19,171 @@
         background-position: center;
 
     }
+    section {
+        background: radial-gradient(circle, rgba(2, 48, 71, 1) 0%, rgba(112, 193, 179, 1) 100%);
+        color: #ffffff;
+        /* padding: 3rem 0; */
+        text-align: center;
+        /* border-bottom: 6px solid #ff6f61; */
+    }
 
     .light {
-        backdrop-filter: blur(3px);
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        /* border: 3px solid rgba(255, 255, 255, 0.3); */
+        padding: 2.5rem;
+        /* border-radius: 20px; */
+        display: inline-block;
+        margin: 0 auto;
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
     }
 
-    .card {
-        height: 380px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 1.5rem;
-        box-shadow: 3px 3px 5px;
-        background-color: rgba(134, 193, 225, 0.682);
-    }
-
-    .card:hover {
-        transform: scale(0.9);
-        transition: 1s ease;
-    }
-
-    .card img {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 1.5rem;
-        /* /* width: 100%; */
-        height: 200px;
-        transition: 1s ease;
-    }
-
-    .card img:hover {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.9);
-        transition: 1s ease;
-    }
-
-    .txt {
-        padding-bottom: 3rem;
-
-
+    marquee {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #ffffff;
+        text-transform: uppercase;
+        /* margin-bottom: 1.5rem; */
     }
 
     h1 {
-        color: rgb(2, 81, 57);
-        /* padding-bottom: 3rem; */
-        /* font-size: 3rem; */
+        font-size: 3rem;
+        font-weight: 700;
+        /* margin-bottom: 1rem; */
+        line-height: 1.2;
+        color: #ffcccb;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     }
 
     .txt p {
-        color: rgba(247, 247, 248, 0.997);
-        font-weight: 500;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.8;
+        color: #eaf0f1;
+        /* margin-top: 1rem; */
     }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 30px;
+        margin: 1rem 0.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-warnning {
+        background-color: #ff6f61;
+        color: #fff;
+        border: none;
+    }
+
+    .btn-warnning:hover {
+        background: #ff6f61;
+        transform: scale(1.1);
+        box-shadow: 0px 4px 15px rgba(255, 111, 97, 0.5);
+    }
+
+    .btn-light {
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        background: none;
+    }
+
+    .btn-light:hover {
+        background: #ffffff;
+        color: #2c2c2c;
+        transform: scale(1.1);
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+    }
+    
+    .card {
+        height: 380px;
+        background: linear-gradient(145deg, #1E3A5F, #285E8E); /* Deep gradient for a premium feel */
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    } */
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: transform 0.3s ease;
+    }
+
+    .card img:hover {
+        transform: scale(1.05);
+    }
+
+    .card-body {
+        padding: 1.5rem;
+        text-align: center;
+        background: rgba(59, 75, 85, 0.312); /* Semi-transparent overlay for depth */
+        color: #fff;
+    }
+
+    .card-title {
+        font-size: 1.15rem;
+        font-weight: bold;
+        color: #FFE57F; /* Accent color for emphasis */
+        margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+        color: #D5E8E6; /* Subtle color for readability */
+        margin-bottom: 1rem;
+    }
+    
+
+    .card .btn {
+        background-color: #ffffff96;
+        border: 1px solid #ffffff;
+        /* background: none; */
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        text-transform: uppercase;
+        /* border: none; */
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .card .btn:hover {
+        background: #ffffff;
+        color: #2c2c2c;
+        transform: scale(1.05);
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+        /* background: #FFCA28;
+        transform: scale(1.05); */
+    }
+
+    
 </style>
 
 {% endblock css %}
 
 {% block content %}
+
 <!-- {% include 'components/message.html' %} -->
-<section class="py-3 text-center">
+<section class="text-center">
     <div class="light">
-        <div class="fw-bold fs-3 text-warning">
-            <marquee><u>"Welcome to Our Hostel: Where Comfort Meets Adventure!"</u></marquee>
+        <div class="fw-bold fs-3">
+            <marquee>Welcome to Our Hostel: Where Comfort Meets Adventure!</marquee>
         </div>
         <div class="row py-lg-1">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <div class="txt">
-                    <h1 class="fw-bold"><u>Affordable Comfort </u>: <br>"Stay with Us at Our Hostel!"</h1>
+                    <h1 class="fw-bold"> <br>Stay with Us at Our Hostel!</h1>
                     <p class="lead">"Stay at our hostel for a cozy and budget-friendly experience. Located in a
                         convenient
                         spot,
@@ -102,27 +198,15 @@
                 <div class="text-center">
                     {% if user.is_authenticated %}
                     <div class="dropdown open">
-                        <a class="btn btn-warning fs-5 fw-bold px-4 py-2" type="button" id="triggerId" data-bs-toggle="dropdown"
+                        <a class="btn btn-warnning fs-5 fw-bold px-4 py-2" type="button" id="triggerId" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             {{user.username|title}}
                         </a>
-                        <!-- <div class="dropdown-menu" aria-labelledby="triggerId">
-    
-                            {% if user.is_superuser %}
-                            <a class="dropdown-item" href="{% url 'admin:index' %}">Dashboard</a>
-    
-                            {% endif %}
-    
-    
-                            <a class="dropdown-item text-dark" href="#">Profile</a>
-                            <a class="dropdown-item text-dark" href="{% url 'logout' %}">Logout</a>
-    
-                        </div> -->
                     </div>
     
                     {% else %}
-                    <a href="{% url 'login' %}" class="btn btn-outline-light fw-bold btn-lg my-1">Login</a>
-                    <a href="{% url 'register' %}" class="btn btn-warning fw-bold btn-lg my-1">Register</a>
+                    <a href="{% url 'login' %}" class="btn btn-light fw-bold btn-lg my-1">Login</a>
+                    <a href="{% url 'register' %}" class="btn btn-warnning fw-bold btn-lg my-1">Register</a>
                     {% endif %}
                 </div>
                 <!-- <a href="{% url 'login' %}" class="btn btn-outline-light fw-bold btn-lg my-1">Login</a>
@@ -139,7 +223,7 @@
             <div class="card" style="border-radius: 2rem;">
                 <img src="{% static 'images/image1.jpg' %}" class="card-img-top mx-auto d-block " alt="">
                 <div class="card-body" style="text-align: start;">
-                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Book rooms for living"</b></h5>
+                    <h5 class="card-title" ><b>"Book rooms for living"</b></h5>
                     <p class="card-text">Select the room as your requirement</p>
                     <a href="{% url 'book_room' %}" class="btn btn-outline-secondary text-dark">Book rooms</a>
                 </div>
@@ -150,7 +234,7 @@
                 <img src="{% static 'images/image.jpeg' %}" class="card-img-top mx-auto d-block img-fluid"
                     alt="Centered Image">
                 <div class="card-body" style="text-align: start;">
-                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Simplify Your Room"</b></h5>
+                    <h5 class="card-title" ><b>"Simplify Your Room"</b></h5>
                     <p class="card-text">Select the room as your requirement</p>
                     <a href="{% url 'room_management' %}" class="btn btn-outline-secondary text-dark">Manage rooms</a>
                 </div>
@@ -161,7 +245,7 @@
                 <img src="{% static 'images/image0.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
                     alt="Centered Image">
                 <div class="card-body" style="text-align: start;">
-                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Enroll with Ease"</b></h5>
+                    <h5 class="card-title"><b>"Enroll with Ease"</b></h5>
                     <p class="card-text">Enroll with eaasest way</p>
                     <a href="{% url 'add_student' %}" class="btn btn-outline-secondary text-dark">Enroll Student</a>
                 </div>
@@ -172,7 +256,7 @@
                 <img src="{% static 'images/image3.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
                     alt="Centered Image">
                 <div class="card-body" style="text-align: start;">
-                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Explore Available Rooms"</b></h5>
+                    <h5 class="card-title"><b>"Explore Available Rooms"</b></h5>
                     <p class="card-text">Select the room as your requirement</p>
                     <a href="{% url 'room_list' %}" class="btn btn-outline-secondary text-dark">Rooms list</a>
                 </div>
@@ -183,7 +267,7 @@
                 <img src="{% static 'images/image_staff.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
                     alt="Centered Image">
                 <div class="card-body" style="text-align: start;">
-                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Check Our Staff List!"</b></h5>
+                    <h5 class="card-title"><b>"Check Our Staff List!"</b></h5>
                     <p class="card-text">Select the room as your requirement</p>
                     <a href="{% url 'staff_list' %}" class="btn btn-outline-secondary text-dark">Check Staffs</a>
                 </div>
@@ -194,7 +278,7 @@
                 <img src="{% static 'images/image_student.jpg' %}" class="card-img-top mx-auto d-block img-fluid"
                     alt="Centered Image">
                 <div class="card-body" style="text-align: start;">
-                    <h5 class="card-title" style="color: rgb(6, 75, 194);"><b>"Check Student list"</b></h5>
+                    <h5 class="card-title" ><b>"Check Student list"</b></h5>
                     <p class="card-text">Select the room as your requirement</p>
                     <a href="{% url 'student_list' %}" class="btn btn-outline-secondary text-dark">Check students</a>
                 </div>
