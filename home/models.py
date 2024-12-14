@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Contact(models.Model):
-    email = models.EmailField()
     name = models.CharField(max_length=200)
+    email = models.EmailField()
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     
@@ -30,16 +30,16 @@ class Room(models.Model):
 
 
 
-class Stafflist(models.Model):
-    name = models.CharField(max_length=100)
-    designation = models.CharField(max_length=100)
-    email = models.EmailField()
-    phone_number = models.CharField(max_length=15)
-    address = models.TextField()
-    # Add other fields as needed
+# class Stafflist(models.Model):
+#     name = models.CharField(max_length=100)
+#     designation = models.CharField(max_length=100)
+#     email = models.EmailField()
+#     phone_number = models.CharField(max_length=15)
+#     address = models.TextField()
+#     # Add other fields as needed
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
 class Staff(models.Model):
     name = models.CharField(max_length=100)
@@ -54,26 +54,27 @@ class Staff(models.Model):
     def __str__(self):
         return self.name
     
+# class Student(models.Model):
+#     first_name = models.CharField(max_length=100)
+#     last_name = models.CharField(max_length=100)
+#     roll_number = models.CharField(max_length=20, unique=True)
+#     email = models.EmailField()
+#     # Add other fields as needed
+
+#     def __str__(self):
+#         return f"{self.first_name} {self.last_name}"
+
 class Student(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    roll_number = models.CharField(max_length=20, unique=True)
-    email = models.EmailField()
-    # Add other fields as needed
-
-    def __str__(self):
-        return f"{self.first_name} {self.last_name}"
-
-class Student(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    roll_number = models.CharField(max_length=20, unique=True)
+    father_name = models.CharField(max_length=100)
+    roll_number = models.IntegerField( unique=True)
     email = models.EmailField(unique=True)
-    phone_number = models.CharField(max_length=15)
+    phone_number = models.IntegerField()
     address = models.TextField()
     date_of_birth = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

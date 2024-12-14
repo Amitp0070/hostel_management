@@ -4,130 +4,215 @@
 {% block css %}
 <style>
     body {
-        background-color: rgba(105, 156, 173, 0.889);
-        /* background-image: url("images/image.jpg"); */
+        background-color: rgba(105, 156, 173, 0.889); /* Light grayish background */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
     }
 
-    .inner-container {
-        border-radius: 2rem;
-        margin: 1rem;
-        background-color: rgb(190, 237, 237);
+    .form-container {
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 2rem auto;
+        transition: all 0.3s ease-in-out;
     }
 
-    h1 {
-        color: rgb(39, 91, 100);
-        font-weight: bold;
+    .form-container:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
-        display: flex;
-        justify-content: center;
-        font-weight: bold;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 1.8rem;
+        padding: 1.2rem 0;
+        background-color: #2c7da0;
+        border-bottom: 2px solid #ddd;
+        border-radius: 10px;
     }
 
-    .fa-brands {
-        font-size: 2rem;
-        padding-top: 1rem;
-        margin-right: 1rem;
+    .form-row {
+        display: flex;
+        gap: 1.8rem;
+        flex-wrap: wrap;
+        margin-bottom: .5rem;
+    }
+
+    .form-group {
+        flex: 1;
+        min-width: 240px;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.6rem;
+        font-weight: 600;
+        color: #34495e;
+        font-size: 1rem;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: #f9f9f9;
+        transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+        background-color: #ffffff;
+        outline: none;
+    }
+
+    input:hover, textarea:hover {
+        border-color: #3498db;
+        background-color: #f1f9fe;
+    }
+
+    .form-group input:valid + label,
+    .form-group textarea:valid + label {
+        top: -8px;
+        left: 12px;
+        font-size: 0.9rem;
+        color: #3498db;
+        font-weight: 600;
+    }
+
+    .btn-primary {
+        background-color: #2980b9;
+        color: white;
+        padding: 1rem 1.5rem;
+        border: none;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        width: 100%;
+    }
+
+    .btn-primary:hover {
+        background-color: #1d6a92;
+        transform: scale(1.05);
+    }
+
+    .btn-primary:active {
+        transform: scale(1);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+        .form-row {
+            gap: 1.2rem;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .form-container {
+            padding: 2rem;
+        }
+
+        .form-row {
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .btn-primary {
+            padding: 0.9rem;
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .form-container {
+            padding: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .btn-primary {
+            font-size: 1rem;
+            padding: 0.8rem;
+        }
     }
 </style>
 {% endblock css %}
 
-
 {% block content %}
-<div class="container">
-    <div class="inner-container">
-
-        <div class="col">
-            <!-- <div class="card"> -->
-            <main class="d-flex justify-content-center">
-                <div class="col-md-4 col-lg-8 py-2">
-                    <h2 class="mb-3">Add Student</h2>
-                    <form method="post" class="needs-validation" novalidate="">
-                        {% csrf_token %}
-                        <!-- {% include 'components/message.html' %} -->
-                        <div class="row g-3 py-2">
-                            <div class="col-sm-6">
-                                <label for="firstName" class="form-label">First name:</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="first name" value="" required
-                                    size="30">
-                                <div class="invalid-feedback">
-                                    Valid first name is required.
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <label for="lastName" class="form-label">Last name:</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="last name" value=""
-                                    required="">
-                                <div class="invalid-feedback">
-                                    Valid last name is required.
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="fatherName" class="form-label">Father name:</label>
-                                <input type="text" class="form-control" id="fatherName" placeholder="father name"
-                                    value="" required size="30">
-                                <div class="invalid-feedback">
-                                    Valid first name is required.
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="email" class="form-label">Email <span
-                                        class="text-body-secondary">(Optional):</span></label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address for shipping updates.
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="collegeName" class="form-label">College name:</label>
-                                <input type="text" class="form-control" id="collegeName" placeholder="college name" value="" required>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="address" class="form-label">Address: <span
-                                        class="text-body-secondary">(Optional)</span></label>
-                                <input type="text" class="form-control" id="address" placeholder="address">
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address for shipping updates.
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="aadhaar" class="form-label">Aadhaar no:<span
-                                    class="text-body-secondary">(Unique)</span> </label>
-                                <input type="text" name="Aadhaar" id="Aadhaar" placeholder="Aadhaar no..."
-                                    class="form-control" pattern="0-9">
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="num" class="form-label">Phone no: </label>
-                                <input type="number" name="num" id="num" class="form-control" placeholder="phone no..">
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="date" class="form-label">Date of birth: </label>
-                                <input type="date" name="dob" id="dob">
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="datetime-local" class="form-label">Local time:</label>
-                                <input type="datetime-local" name="admissiondate" id="admitdate">
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="save-info">
-                                <label class="form-check-label" for="save-info">Save this information
-                                    for
-                                    next
-                                    time</label>
-                            </div>
-
-                            <hr class="my-3">
-                            <div class="d-flex justify-content-center my-2">
-                                <button class="w-20 btn btn-primary btn-lg" type="submit">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </main>
+<div class="form-container">
+    <h2>Add New Student</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group">
+                {{ form.first_name.label_tag }}
+                {{ form.first_name }}
+            </div>
+            <div class="form-group">
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}
+            </div>
         </div>
-    </div>
-</div>
+        <div class="form-row">
+            <div class="form-group">
+                {{ form.father_name.label_tag }}
+                {{ form.father_name }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                {{ form.roll_number.label_tag }}
+                {{ form.roll_number }}
+            </div>
+            <div class="form-group">
+                {{ form.date_of_birth.label_tag }}
+                {{ form.date_of_birth }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                {{ form.phone_number.label_tag }}
+                {{ form.phone_number }}
+            </div>
+            <div class="form-group">
+                {{ form.address.label_tag }}
+                {{ form.address }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                {{ form.created_at.label_tag }}
+                {{ form.created_at }}
+            </div>
+        </div>
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
 </div>
 {% endblock content %}
