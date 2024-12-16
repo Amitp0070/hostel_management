@@ -9,7 +9,7 @@ class Contact(models.Model):
     
     def __str__(self):
         return self.name 
-       
+
         
 class Room(models.Model):
     room_number = models.CharField(max_length=50)
@@ -78,8 +78,3 @@ class Student(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
-    
-
-
-
-    
