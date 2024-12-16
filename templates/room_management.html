@@ -2,89 +2,189 @@
 {% load static %}
 
 {% block css %}
-    
-
-    
 <style>
-  body {
-    background-color: rgba(105, 156, 173, 0.889);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  /* General Styles */
+  
+
   #container {
-    background-color: rgb(190, 237, 237);
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #ffffff;
+    max-width: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 2rem;
   }
+
   h1 {
     text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    background-color: #2c7da0;
+    margin-bottom: 20px;
+    padding: 1rem 0;
+    border-bottom: 2px solid #ddd;
+    border-radius: 12px 12px 0 0;
   }
+
+  .form-container,
+  .list-container {
+    flex: 1;
+  }
+ 
+  /* Form Styles */
   form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
+
   label {
-    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #2d3748;
+    font-weight: bold;
   }
+
   input[type="text"],
   input[type="number"],
   input[type="submit"] {
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    padding: 1rem;
+    border: 2px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.3s ease;
   }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border-color: #48bb78;
+    box-shadow: 0 0 5px rgba(72, 187, 120, 0.5);
+  }
+
   input[type="submit"] {
-    background-color: #4CAF50;
+    background: #007bff;
     color: white;
     border: none;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s ease;
   }
+
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background: #0056b3;
   }
-  ul {
-    list-style-type: none;
-    padding: 0;
+
+  /* List Styles */
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    background-color: #2c7da0;
+    margin-bottom: 20px;
+    padding: 1rem 0;
+    border-bottom: 2px solid #ddd;
+    border-radius: 12px 12px 0 0;
   }
-  li {
-    /* background-color: #f9f9f9; */
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 3px;
+
+  table {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-collapse: collapse;
+    margin-left: auto;
+  }
+
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+  }
+
+  th {
+    background-color: #f7fafc;
+    font-weight: bold;
+    color: #4a5568;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+
+  tr:hover {
+    background-color: #edf2f7;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="submit"] {
+      font-size: 0.9rem;
+      padding: 0.8rem;
+    }
+
+    table {
+      font-size: 0.9rem;
+    }
+
+    #container {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
   }
 </style>
 {% endblock css %}
 
-
 {% block content %}
-    
-
-    
 <div id="container">
-  <h1>Room Management System</h1>
-  
-  <form id="roomForm">
-    <label for="roomName">Room Name:</label>
-    <input type="text" id="roomName" name="roomName" required>
-    <label for="roomCapacity">Room Capacity:</label>
-    <input type="number" id="roomCapacity" name="roomCapacity" required>
-    <input type="submit" value="Add Room">
-  </form>
+  <!-- Form Container -->
+  <div class="form-container">
+    <h1>Room Management System</h1>
+    <form id="roomForm" method="POST">
+      {% csrf_token %}
+      <label for="roomName">Room Name:</label>
+      <input type="text" id="roomName" name="roomName" required>
 
-  <h2>Rooms List:</h2>
-  <ul id="roomsList"></ul>
+      <label for="roomCapacity">Room Capacity:</label>
+      <input type="number" id="roomCapacity" name="roomCapacity" required>
+
+      <label for="roomPrice">Room Price:</label>
+      <input type="number" id="roomPrice" name="roomPrice" required>
+
+      <input type="submit" value="Add Room">
+    </form>
+  </div>
+
+  <!-- Room List Container -->
+  <div class="list-container">
+    <h2>Room List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Room Name</th>
+          <th>Capacity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for room in Rooms %}
+        <tr>
+          <td>{{ room.room_number }}</td>
+          <td>{{ room.capacity }}</td>
+          <td>${{ room.price }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% endblock content %}
-
-
-{% block js %}
-
-<script src="{% static 'js/room_manage_view.js' %}"></script>
-
-{% endblock js %}
-

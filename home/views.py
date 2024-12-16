@@ -5,7 +5,7 @@ from django.contrib import messages
 from .forms import ContactForm , StudentForm
 from .models import Room, Staff, Student
 from django.contrib.auth.decorators import login_required
-
+from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
     return render(request, 'home.html')
@@ -25,7 +25,7 @@ def contact(request):
     #todo add contact form
     return render(request, 'contact.html', {'form':form})
 
-
+@csrf_exempt
 def register_view(request):
     # agar form submit ho to
     if request.method == "POST":
@@ -52,7 +52,7 @@ def register_view(request):
     else:
         return render(request, 'accounts/register.html')
 
-    
+@csrf_exempt 
 def login_view(request):
     if request.method == "POST":
         username = request.POST.get('username')
@@ -84,19 +84,21 @@ def profile(request):
 
 @login_required
 def room_list(request):
-    rooms = Room.objects.all()
-    return render(request, 'room_list.html', {'rooms': rooms})
+    Rooms = Room.objects.all()
+    return render(request, 'room_list.html', {'Rooms': Rooms})
 
 
 @login_required
 def room_management(request):
     if request.method == 'POST':
-        room_name = request.POST.get('room_name')
+        room_number = request.POST.get('room_name')
         room_capacity = request.POST.get('room_capacity')
-        Room.objects.create(name=room_name, capacity=room_capacity)
+        room_price = request.POST.get('room_price')
+        Room.objects.create(name=room_number, capacity=room_capacity, room_price=room_price)
         return redirect('room_management')
     else:
-        return render(request, 'room_management.html', {})
+        Rooms = Room.objects.all().order_by('room_number')
+        return render(request, 'room_management.html', {"Rooms" : Rooms})
 
 
 

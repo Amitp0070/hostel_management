@@ -27,8 +27,6 @@ urlpatterns = [
     
     path('students/', views.student_list, name='student_list'),
     
-    path('rooms/', views.room_list, name='room_list'),
-
     path('book-room/', views.book_room, name='book_room'),
     
     path('search/', views.search_room, name='search_room'),

@@ -14,18 +14,18 @@ class Contact(models.Model):
 class Room(models.Model):
     room_number = models.CharField(max_length=50)
     capacity = models.IntegerField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=500)
     # Add other fields as needed
 
     def __str__(self):
         return self.room_number
 
-class Room(models.Model):
-    room_number = models.CharField(max_length=20)
-    capacity = models.IntegerField()
+# class Room(models.Model):
+#     room_number = models.CharField(max_length=20)
+#     capacity = models.IntegerField()
 
-    def __str__(self):
-        return self.room_number
+#     def __str__(self):
+#         return self.room_number
 
 
 
