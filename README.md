@@ -21,9 +21,13 @@ Form for book rooms
 
 
 Check for room list
-![Screenshot 2024-12-30 142937](https://github.com/user-attachments/assets/e7f03b89-84ba-46b8-8fee-e5f2e262c74d)
+![Screenshot 2024-12-30 143509](https://github.com/user-attachments/assets/fbe928c2-cbc1-443d-b0e0-d534543ca291)
 
 Check for student list
+![Screenshot 2024-12-30 143533](https://github.com/user-attachments/assets/55ec6982-0e41-4204-be70-ab5060fed63b)
+
+Check Staff list
+![Screenshot 2024-12-30 143548](https://github.com/user-attachments/assets/ada02328-9cb6-4c28-b9b0-015c75540360)
 
 
 Contact page
