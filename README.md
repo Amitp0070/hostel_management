@@ -3,26 +3,32 @@ Hostel Management System
 This software helps manage hostels efficiently. It tracks student details, room allocations, and staff information. Users can easily handle enrolls and student feedback. The system generates reports for better insights. Install the system, log in, and navigate through features to manage hostel operations smoothly.
 
 Register page
-![Screenshot 2024-03-12 192526](https://github.com/Amitp0070/hostel_management/assets/147509394/41cade3c-b999-4326-b11e-4b28f4dfad7d)
+![Screenshot 2024-12-30 142553](https://github.com/user-attachments/assets/c7530ca9-e3c1-4b56-81cb-6437ee2bccc8)
 
 Login page
-![Screenshot 2024-03-12 192234](https://github.com/Amitp0070/hostel_management/assets/147509394/85f9408b-2ab7-4cc5-8ace-a01bef03dc33)
+![Screenshot 2024-12-30 142603](https://github.com/user-attachments/assets/46483f13-9875-4cf4-adc2-0b92cf65a144)
 
 This is the Home page of my mini project 
-![Screenshot 2024-03-10 183511](https://github.com/Amitp0070/hostel_management/assets/147509394/a952aed3-5006-49e7-829b-4e4c4550c01f)
-![Screenshot 2024-03-10 182027](https://github.com/Amitp0070/hostel_management/assets/147509394/0461e44d-a7d1-4dc3-90ae-89319fd6a192)
+![Screenshot 2024-12-30 142149](https://github.com/user-attachments/assets/619f88c1-968b-4412-9e3f-e47134e6bd11)
+![Screenshot 2024-12-30 142223](https://github.com/user-attachments/assets/e6fd3545-8ca2-4f50-8d47-0a17f79ef088)
 
 Form for add student for hostel room
-![Screenshot 2024-03-10 183121](https://github.com/Amitp0070/hostel_management/assets/147509394/fbe3638d-2494-44dd-98e1-68bde3c872b4)
+![Screenshot 2024-12-30 143000](https://github.com/user-attachments/assets/d8d5f3bc-7ea4-4b6c-a62b-4d847c26732d)
 
 Form for book rooms
-![Screenshot 2024-03-10 183027](https://github.com/Amitp0070/hostel_management/assets/147509394/d098673a-80d5-41ea-b403-6fc18fe9d57d)
+![Screenshot 2024-12-30 142911](https://github.com/user-attachments/assets/2b21b86a-2d1e-4935-9c9f-77a8d7cc2cc3)
+
+
 
 Check for room list
-![Screenshot 2024-03-10 183301](https://github.com/Amitp0070/hostel_management/assets/147509394/e79adefb-3486-40cb-b333-f472df5cca70)
+![Screenshot 2024-12-30 143509](https://github.com/user-attachments/assets/fbe928c2-cbc1-443d-b0e0-d534543ca291)
 
 Check for student list
-![Screenshot 2024-03-10 183406](https://github.com/Amitp0070/hostel_management/assets/147509394/0b3cef87-90c4-43d9-b0a1-19ac480fb9e3)
+![Screenshot 2024-12-30 143533](https://github.com/user-attachments/assets/55ec6982-0e41-4204-be70-ab5060fed63b)
+
+Check Staff list
+![Screenshot 2024-12-30 143548](https://github.com/user-attachments/assets/ada02328-9cb6-4c28-b9b0-015c75540360)
+
 
 Contact page
 ![Screenshot 2024-03-10 182337](https://github.com/Amitp0070/hostel_management/assets/147509394/30fdde6a-7011-4205-8581-537a041ac4c0)
