@@ -9,8 +9,8 @@ Login page
 ![Screenshot 2024-03-12 192234](https://github.com/Amitp0070/hostel_management/assets/147509394/85f9408b-2ab7-4cc5-8ace-a01bef03dc33)
 
 This is the Home page of my mini project 
-![Screenshot 2024-03-10 183511](https://github.com/Amitp0070/hostel_management/assets/147509394/a952aed3-5006-49e7-829b-4e4c4550c01f)
-![Screenshot 2024-03-10 182027](https://github.com/Amitp0070/hostel_management/assets/147509394/0461e44d-a7d1-4dc3-90ae-89319fd6a192)
+![Screenshot 2024-12-30 142149](https://github.com/user-attachments/assets/619f88c1-968b-4412-9e3f-e47134e6bd11)
+![Screenshot 2024-12-30 142223](https://github.com/user-attachments/assets/e6fd3545-8ca2-4f50-8d47-0a17f79ef088)
 
 Form for add student for hostel room
 ![Screenshot 2024-03-10 183121](https://github.com/Amitp0070/hostel_management/assets/147509394/fbe3638d-2494-44dd-98e1-68bde3c872b4)
