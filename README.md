@@ -3,10 +3,10 @@ Hostel Management System
 This software helps manage hostels efficiently. It tracks student details, room allocations, and staff information. Users can easily handle enrolls and student feedback. The system generates reports for better insights. Install the system, log in, and navigate through features to manage hostel operations smoothly.
 
 Register page
-![Screenshot 2024-03-12 192526](https://github.com/Amitp0070/hostel_management/assets/147509394/41cade3c-b999-4326-b11e-4b28f4dfad7d)
+![Screenshot 2024-12-30 142553](https://github.com/user-attachments/assets/c7530ca9-e3c1-4b56-81cb-6437ee2bccc8)
 
 Login page
-![Screenshot 2024-03-12 192234](https://github.com/Amitp0070/hostel_management/assets/147509394/85f9408b-2ab7-4cc5-8ace-a01bef03dc33)
+![Screenshot 2024-12-30 142603](https://github.com/user-attachments/assets/46483f13-9875-4cf4-adc2-0b92cf65a144)
 
 This is the Home page of my mini project 
 ![Screenshot 2024-12-30 142149](https://github.com/user-attachments/assets/619f88c1-968b-4412-9e3f-e47134e6bd11)
